@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="profile">
+    <title>GlurGeek Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: antiquewhite;">
+    <main>
+        <!-- Navigation Bar -->
+        <header>
+                <nav>
+                    <img class="logo" src="Image/Glurgeek.png" alt="logo">
+                    <div class="links">
+                        <a href="#">About</a>
+                        <a href="#">Docs</a>
+                        <button class="button_med" href="#">Login</button>
+                    </div>
+                </nav>
+
+        </header>
+        <!-- Contents -->
+        <section class="info"> 
+            <h1 class="content_font1"><%=contentfont1 %></h1>
+            <h4 class="content_font2"><%=contentfont2 %></h4>
+                <div class="icons">
+                    <div class="icon">
+                        <img src="Image/Email.png" alt="email">
+                        <p class="icon_info">Anuwat.jant@bumail.net</p>
+                    </div>
+                    <div class="icon">
+                        <img src="Image/Facebook.png" alt="facebook">
+                        <p class="icon_info">A'Anuwat Janthon</p>
+                    </div>                
+                    <div class="icon">
+                        <img src="Image/Instagram.png" alt="youtube">
+                        <p class="icon_info">lgoybaisfpagl</p>
+                    </div>    
+                </div>
+        </section>
+        <!-- Feature Bar -->
+        <section class="feature">
+            <!-- Add Parameters that forEach loop -->
+            <% obj_feature.forEach(function(feature){ %>
+            <div class="feature">
+                <img src= <%= feature.img %> alt="programming">
+                <div class="feature_info">
+                    <p class="feature_top"><%= feature.top %></p>
+                    <p class="feature_bottom"><%= feature.bottom %></p>
+                </div>
+            </div>
+            <% }) %>
+            <!-- Comment not use
+            <div class="feature">
+                <img src="Image/Gojo_Wakana.png" alt="Gojo_Wakana">
+                <div class="feature_info">
+                    <p class="feature_top">Wakana_Gojo</p>
+                    <p class="feature_bottom">Kitagawa Marin</p>
+                </div>
+            </div>
+            -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>
